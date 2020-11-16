@@ -6,12 +6,32 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("(e)asy, (m)edium, (h)ard?");
+            string difficulty = Console.ReadLine().ToLower();
+
+            int difficultyToken = 0;
+
+            if (difficulty == "e")
+            {
+                difficultyToken = 8;
+            }
+            else if (difficulty == "m")
+            {
+                difficultyToken = 6;
+            }
+            else if (difficulty == "h")
+            {
+                difficultyToken = 4;
+            }
+
+
+
             Random r = new Random();
             int secretNumber = r.Next(1, 100);
             int token = 0;
-            while (token < 4)
+            while (token < difficultyToken)
             {
-                int remainingGuesses = 4 - token;
+                int remainingGuesses = difficultyToken - token;
                 Console.WriteLine($"Can you guess the secret number??? Remaining Guesses: {remainingGuesses}");
                 token++;
                 string guessString = Console.ReadLine();
