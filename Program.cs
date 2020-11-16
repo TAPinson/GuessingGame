@@ -6,7 +6,7 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("(e)asy, (m)edium, (h)ard?");
+            Console.WriteLine("(e)asy, (m)edium, (h)ard, (c)heater?");
             string difficulty = Console.ReadLine().ToLower();
 
             int difficultyToken = 0;
@@ -22,6 +22,10 @@ namespace GuessingGame
             else if (difficulty == "h")
             {
                 difficultyToken = 4;
+            }
+            else if (difficulty == "c")
+            {
+                difficultyToken = int.MaxValue;
             }
 
 
