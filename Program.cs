@@ -8,28 +8,23 @@ namespace GuessingGame
         {
             Console.WriteLine("(e)asy, (m)edium, (h)ard, (c)heater?");
             string difficulty = Console.ReadLine().ToLower();
-
             int difficultyToken = 0;
-
-            if (difficulty == "e")
+            if (difficulty == "e" || difficulty == "easy")
             {
                 difficultyToken = 8;
             }
-            else if (difficulty == "m")
+            else if (difficulty == "m" || difficulty == "medium")
             {
                 difficultyToken = 6;
             }
-            else if (difficulty == "h")
+            else if (difficulty == "h" || difficulty == "hard")
             {
                 difficultyToken = 4;
             }
-            else if (difficulty == "c")
+            else if (difficulty == "c" || difficulty == "cheater")
             {
                 difficultyToken = int.MaxValue;
             }
-
-
-
             Random r = new Random();
             int secretNumber = r.Next(1, 100);
             int token = 0;
@@ -54,12 +49,9 @@ namespace GuessingGame
                     else
                     {
                         Console.WriteLine("Youre guess was too low!");
-
                     }
                 }
             }
-
-
         }
     }
 }
