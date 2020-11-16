@@ -11,12 +11,13 @@ namespace GuessingGame
             while (token < 4)
             {
                 token++;
-                Console.WriteLine("Can you guess the secret number???");
+                Console.WriteLine($"Can you guess the secret number??? This is guess: #{token}");
                 string guess = Console.ReadLine();
 
                 if (guess == secretNumber)
                 {
                     Console.WriteLine("Success! You've guessed the secret number!");
+                    break;
                 }
                 else
                 {
