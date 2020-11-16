@@ -16,8 +16,6 @@ namespace GuessingGame
                 token++;
                 string guessString = Console.ReadLine();
                 int guess = Int32.Parse(guessString);
-
-
                 if (guess == secretNumber)
                 {
                     Console.WriteLine("Success! You've guessed the secret number!");
@@ -25,7 +23,15 @@ namespace GuessingGame
                 }
                 else
                 {
-                    Console.WriteLine("Failure! You have brought shame on yourself and your family!");
+                    if (guess > secretNumber)
+                    {
+                        Console.WriteLine("Your guess was too high!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Youre guess was too low!");
+
+                    }
                 }
             }
 
