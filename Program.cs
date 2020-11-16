@@ -26,7 +26,7 @@ namespace GuessingGame
                 difficultyToken = int.MaxValue;
             }
             Random r = new Random();
-            int secretNumber = r.Next(1, 100);
+            int secretNumber = r.Next(1, 101);
             int token = 0;
             while (token < difficultyToken)
             {
